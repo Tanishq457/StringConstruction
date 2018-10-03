@@ -1,16 +1,5 @@
-"""
-Returns the cost to make a string p from a given string s
+def stringConstruction(s):
 
-
-	Cost to append a new character is 1
-	No cost to append a substring of p
-
-"""
-
-
-
-def stringConstruction(s):			#'s' is the test string
-    
     cost=0
     p=''
     c=0
@@ -23,13 +12,15 @@ def stringConstruction(s):			#'s' is the test string
         
             p+=s[i]
             cost+=1
-            
+        elif i==2:
+            p+=s[i+1]
+            cost+=2
         else:
             
             if s[i] not in s[:i]:
                 p+=s[i]
                 cost+=1
-                
+
             else:
                 
                 for j in range(i,len(s)):
