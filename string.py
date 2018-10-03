@@ -11,8 +11,8 @@ Returns the cost to make a string p from a given string s
 
 def stringConstruction(s):			#'s' is the test string
     
-    cost=0
-    p=''
+    price=0
+    x=''
     c=0
 
     L=range(0,len(s))
@@ -21,14 +21,14 @@ def stringConstruction(s):			#'s' is the test string
         
         if i==1:
         
-            p+=s[i]
-            cost+=1
+            x+=s[i]
+            price+=1
             
         else:
             
             if s[i] not in s[:i]:
-                p+=s[i]
-                cost+=1
+                x+=s[i]
+                price+=1
                 
             else:
                 
@@ -36,7 +36,7 @@ def stringConstruction(s):			#'s' is the test string
 
                     if i==len(s)-1:
 
-                        p+=s[i]
+                        x+=s[i]
                     
                     
                     elif s[s.find(s[j])]==s[s.find(s[j+1])]:
@@ -47,7 +47,7 @@ def stringConstruction(s):			#'s' is the test string
                         
                         if c!=0:
                             
-                            p+=s[i:j]
+                            x+=s[i:j]
                             del L[i:j+1]
                             break
                             
@@ -55,4 +55,4 @@ def stringConstruction(s):			#'s' is the test string
                         else:
                             
                             break
-    return cost
+    return price
