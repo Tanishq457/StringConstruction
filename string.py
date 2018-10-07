@@ -2,7 +2,7 @@ def stringConstruction(s):
 
     cost=0
     p=''
-    c=0
+    t=0
 
     L=range(0,len(s))
     for i in L:
@@ -17,9 +17,10 @@ def stringConstruction(s):
             cost+=2
         else:
             
-            if s[i] not in s[:i]:
+            if s[i] not in s[:i]:			#new character
                 p+=s[i]
-                cost+=1
+                cost=cost+1
+          
 
             else:
                 
@@ -30,20 +31,21 @@ def stringConstruction(s):
                         p+=s[i]
                     
                     
-                    elif s[s.find(s[j])]==s[s.find(s[j+1])]:
-                        c+=1
+                    elif s[s.find(s[j])]==s[s.find(s[j+1])]:                     #finding substrings 
+                        t+=1
                         continue
                         
                     else:
                         
-                        if c!=0:
+                        if t!=0:
                             
                             p+=s[i:j]
-                            del L[i:j+1]
+                            del L[i:j+1]                                         #removing already added cases
                             break
                             
                             
                         else:
                             
                             break
+    print "the cost to  make the new string is:",cost
     return cost
