@@ -4,8 +4,7 @@ def stringConstruction(s):
     p=''
     t=0
 
-    L=range(0,len(s))
-    for i in L:
+    for i in range(0,len(s)):
 
         
         if i==1:
