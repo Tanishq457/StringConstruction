@@ -49,6 +49,11 @@ def stringConstruction(s):
                             break
     print("the cost to  make the new string is:",cost)
     return cost
+  c=stringConstruction('Varun')
+    print c
+    
+
     s=raw_input("Enter a string")
     stringConstruction(s)
     
+
