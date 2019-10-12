@@ -49,3 +49,5 @@ def stringConstruction(s):
                             break
     print "the cost to  make the new string is:",cost
     return cost
+s=raw_input("Enter a String")
+stringConstruction(s)
