@@ -8,13 +8,13 @@ def stringConstruction(s):
     for i in L:
 
         
-        if i==1:
+        if(i==1):
         
             p+=s[i]
             cost+=1
-        elif i==2:
+        elif(i==2):
             p+=s[i+1]
-            cost+=2
+            cost+=5
         else:
             
             if s[i] not in s[:i]:			#new character
@@ -47,8 +47,13 @@ def stringConstruction(s):
                         else:
                             
                             break
-    print "the cost to  make the new string is:",cost
+    print("the cost to  make the new string is:",cost)
     return cost
-
-    c=stringConstruction('Varun')
+  c=stringConstruction('Varun')
     print c
+    
+
+    s=raw_input("Enter a string")
+    stringConstruction(s)
+    
+
